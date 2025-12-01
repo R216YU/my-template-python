@@ -31,5 +31,5 @@ pythonpath = "src"
 [tool.poe.tasks]
 dev = "uvicorn src.app:app --reload"
 test = "pytest"
-lint = "ruff check ."
+lint = "mypy ."
 format = "ruff format ."
