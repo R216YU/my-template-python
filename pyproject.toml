@@ -29,6 +29,7 @@ package-dir = {"" = "src"}
 pythonpath = "src"
 
 [tool.mypy]
+mypy_path = "src"
 namespace_packages = true
 explicit_package_bases = true
 exclude = [
@@ -36,7 +37,7 @@ exclude = [
 ]
 
 [tool.poe.tasks]
-dev = "uvicorn src.app:app --reload"
+dev = "uvicorn app:app --reload"
 test = "pytest"
 lint = "mypy src"
 format = "ruff format ."

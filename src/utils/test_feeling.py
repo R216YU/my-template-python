@@ -1,4 +1,4 @@
-from src.utils.feeling import get_random_feeling
+from utils.feeling import get_random_feeling
 
 
 class TestGetFeeling:

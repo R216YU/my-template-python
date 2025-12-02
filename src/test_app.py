@@ -1,6 +1,6 @@
 from fastapi.testclient import TestClient
 
-from src.app import app  # FastAPIアプリケーションインスタンス
+from app import app  # FastAPIアプリケーションインスタンス
 
 
 class TestApp:
