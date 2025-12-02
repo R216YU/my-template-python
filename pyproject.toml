@@ -19,6 +19,7 @@ dev = [
     "pytest>=9.0.1",
     "poethepoet>=0.31.1",
     "httpx>=0.28.1",
+    "pre-commit>=4.0.0",
 ]
 
 [tool.setuptools]
@@ -30,5 +31,5 @@ pythonpath = "src"
 [tool.poe.tasks]
 dev = "uvicorn src.app:app --reload"
 test = "pytest"
-lint = "ruff check ."
+lint = "mypy ."
 format = "ruff format ."
