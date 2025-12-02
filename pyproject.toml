@@ -28,8 +28,17 @@ package-dir = {"" = "src"}
 [tool.pytest.ini_options]
 pythonpath = "src"
 
+[tool.mypy]
+namespace_packages = true
+explicit_package_bases = true
+exclude = [
+    "^tests/",
+]
+
 [tool.poe.tasks]
 dev = "uvicorn src.app:app --reload"
 test = "pytest"
-lint = "mypy ."
+lint = "mypy src"
 format = "ruff format ."
+init-pre-commit = "pre-commit install"
+pre-commit = "pre-commit run --all-files"
